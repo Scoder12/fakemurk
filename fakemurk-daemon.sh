@@ -63,7 +63,7 @@
             echo -n "CURRENT_VERSION=13" >/mnt/stateful_partition/fakemurk_version
         fi
         . /mnt/stateful_partition/fakemurk_version
-        . <(curl https://raw.githubusercontent.com/MercuryWorkshop/fakemurk/main/autoupdate.sh)
+        . <(curl https://raw.githubusercontent.com/Scoder12/fakemurk/main/autoupdate.sh)
         if ((UPDATE_VERSION > CURRENT_VERSION)); then
             echo -n "CURRENT_VERSION=$UPDATE_VERSION" >/mnt/stateful_partition/fakemurk_version
             autoupdate
