@@ -1,10 +1,11 @@
 #!/bin/bash
 UPDATE_VERSION=13
+REPO="Scoder12/fakemurk"
 get_asset() {
-    curl -s -f "https://api.github.com/repos/MercuryWorkshop/fakemurk/contents/$1" | jq -r ".content" | base64 -d
+    curl -s -f "https://api.github.com/repos/$repo/contents/$1" | jq -r ".content" | base64 -d
 }
 get_built_asset(){
-    curl -SLk "https://github.com/MercuryWorkshop/fakemurk/releases/latest/download/$1"
+    curl -SLk "https://github.com/$repo/releases/latest/download/$1"
 }
 install() {
     TMP=$(mktemp)
